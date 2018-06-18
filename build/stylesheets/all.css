@@ -1,55 +1,94 @@
-@charset "utf-8";
+@import url(normalize.css);
+/* line 1, /Users/dawsonbeggs/testrepo/source/stylesheets/_base.scss */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
 
+/* line 7, /Users/dawsonbeggs/testrepo/source/stylesheets/_base.scss */
 body {
-  background: #d4d4d4 url("../images/background.png");
-  text-align: center;
-  font-family: sans-serif; }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: black; }
 
+/* line 12, /Users/dawsonbeggs/testrepo/source/stylesheets/_base.scss */
+body:after {
+  content: "";
+  background: url("../images/bg-pattern.svg") repeat;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; }
+
+/* line 23, /Users/dawsonbeggs/testrepo/source/stylesheets/_base.scss */
+ul {
+  list-style: none; }
+
+/* line 28, /Users/dawsonbeggs/testrepo/source/stylesheets/_base.scss */
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  transition: 0.5s all;
+  letter-spacing: .05rem; }
+
+/* line 36, /Users/dawsonbeggs/testrepo/source/stylesheets/_base.scss */
+a:hover {
+  color: blue;
+  transition: 0.5s all; }
+
+/* line 42, /Users/dawsonbeggs/testrepo/source/stylesheets/_base.scss */
 h1 {
-  color: rgba(0, 0, 0, .3);
-  font-weight: bold;
-  font-size: 32px;
-  letter-spacing: -1px;
-  text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
-  background: url("../images/middleman.png") no-repeat center 100px;
-  padding: 350px 0 10px;
-  margin: 0; }
+  color: white;
+  font-weight: 500;
+  font-size: 5rem;
+  letter-spacing: .02rem; }
 
-.doc {
-  font-size: 14px;
-  margin: 0; }
-  .doc:before,
-  .doc:after {
-    opacity: .2;
-    padding: 6px;
-    font-style: normal;
-    position: relative;
-    content: "•"; }
-  .doc a {
-    color: rgba(0, 0, 0, 0.3); }
-    .doc a:hover {
-      color: #666; }
+/* line 49, /Users/dawsonbeggs/testrepo/source/stylesheets/_base.scss */
+.social {
+  flex-direction: row;
+  display: flex; }
 
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s; }
+/* line 54, /Users/dawsonbeggs/testrepo/source/stylesheets/_base.scss */
+.social li {
+  padding: 2em 0; }
 
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-   -webkit-transform: scale(0);
-   opacity: 0;
-  }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
-}
+/* line 58, /Users/dawsonbeggs/testrepo/source/stylesheets/_base.scss */
+.social a {
+  padding: 0 1em 0 0; }
+
+/* line 63, /Users/dawsonbeggs/testrepo/source/stylesheets/_base.scss */
+.header {
+  background: transparent;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  width: 100%; }
+
+/* line 73, /Users/dawsonbeggs/testrepo/source/stylesheets/_base.scss */
+.logo {
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/logo-white.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+  display: block; }
+
+/* line 84, /Users/dawsonbeggs/testrepo/source/stylesheets/_base.scss */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+  padding: 0 50px; }
+
+@media screen and (max-width: 600px) {
+  /* line 93, /Users/dawsonbeggs/testrepo/source/stylesheets/_base.scss */
+  h1 {
+    font-size: 2rem; } }
