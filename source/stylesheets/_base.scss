@@ -32,6 +32,9 @@ a {
   transition: 0.5s all;
   letter-spacing: .05rem;
 }
+a:visited {
+  text-decoration: none;
+}
 
 a:hover {
   color: blue;
