@@ -31,9 +31,11 @@ a {
   font-weight: 400;
   transition: 0.5s all;
   letter-spacing: .05rem;
+  outline: none;
 }
 a:visited {
   text-decoration: none;
+  outline: none;
 }
 
 a:hover {
